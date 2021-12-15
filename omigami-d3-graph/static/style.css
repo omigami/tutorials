@@ -1,0 +1,24 @@
+.link {
+  stroke: #999999;
+  stroke-opacity: 0.6;
+}
+
+.linkLabel {
+  color: #e48768;
+  flood-color: #000000;
+  flood-opacity: 1;
+  font-size: 11px;
+  text-anchor: middle;
+}
+
+.node {
+  stroke-width: 3px;
+  cursor: pointer;
+}
+
+.nodeLabel {
+  fill: #000000;
+  text-anchor: middle;
+  font-size: 11px;
+  cursor: pointer;
+}

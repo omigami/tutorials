@@ -1,0 +1,30 @@
+<html lang="en">
+    <head>
+        <link rel="stylesheet" href="https://unpkg.com/@picocss/pico@latest/css/pico.min.css">
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.1/jquery.min.js" type="text/javascript"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/d3/3.5.16/d3.min.js"></script>
+
+        {% if run %}
+            <script src="{{ url_for('static', filename='scripts.js') }}"></script>
+        {% endif %}
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/picnic">
+        <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+    </head>
+
+
+    <body style="padding-left: 10px">
+    <main class="container">
+        <h2>Find similar spectra from a GNPS spectrumid</h2>
+        For example, try <a href="./?spectrum_id=CCMSLIB00000075073">CCMSLIB00000075073 (Stenothricin E)</a>. The result will take a while to load. You can mouse over each node to view the spectrum name. The links show the <a href="https://datarevenue.com/en-blog/spec2vec-mass-spectral-similarity-metric">Spec2Vec</a> similarity score.
+
+
+        <form action="/" style="max-width:300px">
+            <input type="text" name="spectrum_id" id="spectrum_id">
+            <input type="submit" value="Submit">
+        </form>
+        <div id="divSVG"></div>
+</main>
+
+    </body>
+</html>
+
